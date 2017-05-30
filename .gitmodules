@@ -1,0 +1,3 @@
+[submodule "currency-quiz"]
+	path = currency-quiz
+	url = git@github.com:piti118/currency-quiz.git
