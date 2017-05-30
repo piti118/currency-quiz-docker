@@ -1,11 +1,11 @@
-#make sure you build first
-build:
-  image: node:7
-  volumes:
-    - ./static:/usr/share/nginx/html:ro
-  expose:
-    - "80"
-  environment:
-    - VIRTUAL_HOST=python.maonoi.com
-    - LETSENCRYPT_HOST=python.maonoi.com
-    - LETSENCRYPT_EMAIL=piti118@gmail.com
+version: '2'#make sure you build first
+services:
+  web:
+    build: ./currency-quiz
+    expose:
+      - "5000"
+    environment:
+      - VIRTUAL_HOST=currency-quiz.maonoi.com
+      - LETSENCRYPT_HOST=currency-quiz.maonoi.com
+      - LETSENCRYPT_EMAIL=piti118@gmail.com
+    network_mode: "bridge"
